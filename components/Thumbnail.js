@@ -13,19 +13,17 @@ const Thumbnail = ({ result }) => {
           `${Baseurl} ${result.poster_path}`
         }
         height={1080}
+        className="rounded-[12px]"
         width={1920}
       />
       <div className="p-2 ">
-        <p className="truncate max-w-md">{result.overview}</p>
-        <h2 className="absolute bottom-3 top-[190px] mt-1 text-2xl text-white transition-all duration-100 ease-in-out group-hover:font-bold">
+        <p className="truncate max-w-m  d font-Source-Sans-Pro">
+          {result.overview}
+        </p>
+        <h2 className="absolute bottom-3  top-[150px] mt-1 text-2xl text-white transition-all duration-100 ease-in-out group-hover:font-bold font-Bebas-Neue">
           {result.title || result.original_name}
         </h2>
-        <p className="flex items-center opacity-0 group-hover:opacity-100">
-          {result.media_type && `${result.media_type} `}
-          {''}
-          {(result.release_date || result.first_air_date).slice(0, 4)} {''}
-          <ThumbUpIcon className="h-5 mx-2" />
-        </p>
+
         {/* <h2>{result.first_air_date || release_date || 'Not found'.slice(0, 4)}</h2> */}
       </div>
     </div>
