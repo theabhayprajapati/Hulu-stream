@@ -23,6 +23,7 @@ function Header() {
       <Image
         src={'https://links.papareact.com/ua6'}
         width={200}
+        alt="Commodo mollit irure laborum cillum aliqua voluptate pariatur sit commodo non adipisicing in sit."
         className="object-contain "
         height={100}
       />

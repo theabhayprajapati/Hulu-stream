@@ -2,8 +2,10 @@ import Image from 'next/image'
 import Results from './Results'
 import { ThumbUpIcon } from '@heroicons/react/outline'
 const Thumbnail = ({ result }) => {
-  console.log('2021-09-17'.slice(0, 4))
+  // console.log('2021-09-17'.slice(0, 4))
+
   const Baseurl = 'https://image.tmdb.org/t/p/original'
+  console.log(`${Baseurl} + ${result.backdrop_path || result.poster_path}`)
   return (
     <div className="relative group cursor-pointer transition duration-200  ease-in transform sm:hover:scale-105 hover:z-50 p-2">
       <Image
@@ -12,6 +14,7 @@ const Thumbnail = ({ result }) => {
           `${Baseurl}${result.backdrop_path || result.poster_path} ` ||
           `${Baseurl} ${result.poster_path}`
         }
+        alt="Adipisicing dolor reprehenderit ipsum in nostrud officia esse proident consectetur ipsum nulla laboris id officia."
         height={1080}
         className="rounded-[12px]"
         width={1920}
